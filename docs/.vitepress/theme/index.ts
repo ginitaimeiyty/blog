@@ -2,9 +2,18 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
-//import './test.css'
+import './test.css'
 //import './style.css'
-import '@theojs/lumen/theme'
+import '@theojs/lumen/icon' /* 图标 */
+import '@theojs/lumen/button' /* 按钮 */
+import '@theojs/lumen/colors' /* 配色 */
+import '@theojs/lumen/doc' /* 文档样式 */
+import '@theojs/lumen/doc-blocks' /* 容器(默认):左侧阴影样式 */
+import '@theojs/lumen/doc-blocks-border' /* 容器:边框样式 */
+import '@theojs/lumen/home' /* 首页样式 */
+import '@theojs/lumen/home-blocks' /* 首页按钮 */
+import '@theojs/lumen/pic' /* 图片样式 */
+import '@theojs/lumen/badge' /* 徽章样式 */
 import { Twikoo } from '@theojs/lumen'
 import { Twikoo_Data } from '../data/Twikoo'
 import { Announcement } from '@theojs/lumen'
