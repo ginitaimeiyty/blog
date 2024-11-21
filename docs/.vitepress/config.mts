@@ -33,7 +33,7 @@ export default defineConfig({
     nav: [
       { text: '国内加速地址(同步较慢)', link:'http://route.一只杉鱼.site:8568/ '},
       { text: 'Home', link: '/' },
-      { text: '文章', link: '/markdown-examples' }
+      { text: '文章', link: '/data' }
     ],
 
     sidebar: [
@@ -42,7 +42,7 @@ export default defineConfig({
         collapsed:true,
         items: [
           { text: '计算机组成原理', link: '/zucheng' },
-          { text: '数据结构', link: '/api-examples' },
+          { text: '数据结构', link: '/data' },
           { text: '计算机网络', link: '/network' }
         ]
       }
