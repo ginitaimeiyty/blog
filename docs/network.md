@@ -6,7 +6,7 @@
 ### 1. 网络层次划分
 &emsp;&emsp;为了使不同计算机厂家生产的计算机能够相互通信，以便在更大的范围内建立计算机网络，国际标准化组织(ISO)在1978年提出了"开放系统互联参考模型"，即著名的OSI/RM模型(Open System Interconnection/Reference Model)。它将计算机网络体系结构的通信协议划分为七层，自下而上依次为：物理层(Physics Layer)、数据链路层(Data Link Layer)、网络层(Network Layer)、传输层(Transport Layer)、会话层(Session Layer)、表示层(Presentation Layer)、应用层(Application Layer)。其中第四层完成数据传送服务，上面三层面向用户。<br>
 &emsp;&emsp;除了标准的OSI七层模型以外，常见的网络层次划分还有TCP/IP四层协议以及TCP/IP五层协议，它们之间的对应关系如下图所示：
->![OSI模型](/OSI.jpg)
+> ![OSI模型](/OSI.jpg)
 
 
 ### 2.子网掩码及网络划分

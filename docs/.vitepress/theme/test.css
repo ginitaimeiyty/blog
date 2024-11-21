@@ -325,7 +325,7 @@
     content: "";
     display: block;
     position: absolute;
-    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    background: radial-gradient(#ec7575, #9198e5);
     left: 10%;
     top: 10%;
     transform: translate(-30%, -50%);
