@@ -1,13 +1,12 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import './test.css'
-import './style.css'
+import { h } from 'vue'
+//import './test.css'
+//import './style.css'
 import '@theojs/lumen/theme'
 import { Twikoo } from '@theojs/lumen'
 import { Twikoo_Data } from '../data/Twikoo'
-
 import { Announcement } from '@theojs/lumen'
 import { HomeUnderline } from '@theojs/lumen'
 import { DocAsideLogo } from '@theojs/lumen'

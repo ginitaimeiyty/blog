@@ -1,11 +1,16 @@
 import { defineConfig } from 'vitepress';
-
+import { figure } from '@mdit/plugin-figure';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Mr.🐟",
   titleTemplate: 'Home',
   lastUpdated:true,
   description: "技术博客",
+  markdown: {
+  config: (md) => { 
+        md.use(figure, { figcaption: 'alt', copyAttrs: '^class$', lazy: true }) 
+    } 
+  },
   themeConfig: {
     // debug
     // editLink: {
