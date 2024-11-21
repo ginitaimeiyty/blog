@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -39,8 +38,10 @@ features:
     icon: 🖥️
     link: '/os'
 ---
+<Confetti /> 
+<DataPanel />
 ::: info 协作者:
-  <p></p>
+  
   <box :items="[ 
    {
       name: 'lakkla',

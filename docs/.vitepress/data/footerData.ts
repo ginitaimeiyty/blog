@@ -25,4 +25,5 @@ export const Footer_Data: FooterData = {
       ]
     }
   ]
+  
 }
