@@ -2,7 +2,7 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
-//import './Feature.css'
+import './Feature.css' //毛玻璃效果
 import './test.css'
 //import './style.css'
 import '@theojs/lumen/icon' /* 图标 */

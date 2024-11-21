@@ -1,44 +1,73 @@
-:root{
-    .dark .VPFeature {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden
-}
-
-.dark .VPFeature:before {
-    content: "";
-    display: block;
-    position: absolute;
-    background: radial-gradient(var(--color), transparent, transparent);
-    left: var(--x);
-    top: var(--y);
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 700px;
-    opacity: 0;
-    transition: opacity 1s
-}
-
-.dark .VPFeature:hover:before {
-    opacity: 1;
-    transition: opacity .3s
-}
-
-.dark .VPFeature:after {
-    position: absolute;
-    content: "";
-    display: block;
-    background-color: #222c;
-    z-index: 0;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-radius: 10px
-}
-
-.dark .VPHomeFeatures .VPFeature>.box {
-    position: relative;
-    z-index: 1
-}
-}
+/* .vitepress/theme/style/blur.css */
+:root {
+    /* 首页导航 */
+    .VPNavBar {
+      background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(10px);
+    }
+  
+    /* 文档页导航两侧 */
+    .VPNavBar:not(.home) {
+      background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(10px);
+    }
+  
+    @media (min-width: 960px) {
+      /* 文档页导航两侧 */
+      .VPNavBar:not(.home) {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+  
+      /* 首页下滑后导航两侧 */
+      .VPNavBar:not(.has-sidebar):not(.home.top) {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+    }
+  
+    @media (min-width: 960px) {
+      /* 文档页导航中间 */
+      .VPNavBar:not(.home.top) .content-body {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+  
+      /* 首页下滑后导航中间 */
+      .VPNavBar:not(.has-sidebar):not(.home.top) .content-body {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+    }
+  
+    /* 分割线 */
+  
+    @media (min-width: 960px) {
+      /* 文档页分割线 */
+      .VPNavBar:not(.home.top) .divider-line {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+  
+      /* 首页分割线 */
+      .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+    }
+  
+    /* 搜索框 VPNavBarSearchButton.vue */
+    .DocSearch-Button {
+      background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(10px);
+    }
+  
+    /* 移动端大纲栏 */
+    .VPLocalNav {
+      background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(10px);
+      /* 隐藏分割线 */
+      /* border-bottom: 5px solid var(--vp-c-gutter); */
+      border-bottom: 0px;
+    }
+  }
