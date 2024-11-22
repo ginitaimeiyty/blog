@@ -4,7 +4,7 @@ import DefaultTheme from 'vitepress/theme';
 import busuanzi from "busuanzi.pure.js";
 import DataPanel from "./components/DataPanel.vue";
 import { h } from 'vue'
-import '@theojs/lumen/custom-block'  //跑马灯边框 
+//import '@theojs/lumen/custom-block'  //跑马灯边框 
 //import '@theojs/lumen/Feature' //毛玻璃效果
 import './Feature.css' //毛玻璃效果
 import './test.css'  //移植效果
@@ -17,7 +17,7 @@ import '@theojs/lumen/doc' /* 文档样式 */
 //import '@theojs/lumen/doc-blocks' /* 容器(默认):左侧阴影样式 */
 //import '@theojs/lumen/doc-blocks-border' /* 容器:边框样式 */
 import '@theojs/lumen/home' /* 首页样式 */
-import '@theojs/lumen/rainbow' //彩虹渐变效果
+//import '@theojs/lumen/rainbow' //彩虹渐变效果
 import '@theojs/lumen/home-blocks' /* 首页按钮 */
 import './rainbow.css' //彩虹渐变效果
 import '@theojs/lumen/pic' /* 图片样式 */
