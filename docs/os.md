@@ -81,4 +81,4 @@
 https://blog.csdn.net/Royalic/article/details/119999404
 
 
-<Twikoo :Twikoo_Data="{ envId: 'http://route.一只杉鱼.site:6956'  }" />
+<Twikoo :Twikoo_Data="{ envId: 'https://www.xn--4gqz7lc3sqg4c.site:6956'  }" />
