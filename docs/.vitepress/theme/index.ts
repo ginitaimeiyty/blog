@@ -16,7 +16,8 @@ import '@theojs/lumen/colors' /* 配色 */
 import '@theojs/lumen/doc' /* 文档样式 */
 //import '@theojs/lumen/doc-blocks' /* 容器(默认):左侧阴影样式 */
 //import '@theojs/lumen/doc-blocks-border' /* 容器:边框样式 */
-import '@theojs/lumen/home' /* 首页样式 */
+//import '@theojs/lumen/home' /* 首页样式 */
+import './dingyi.css' //背景图片后面的渐变
 //import '@theojs/lumen/rainbow' //彩虹渐变效果
 import '@theojs/lumen/home-blocks' /* 首页按钮 */
 import './rainbow.css' //彩虹渐变效果

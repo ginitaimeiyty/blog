@@ -1,0 +1,4 @@
+:root {
+    --vp-home-hero-image-background-image: -webkit-linear-gradient(60deg, #50cc7f 0%, #f5d100 100%);
+    --vp-home-hero-image-filter: blur(100px);
+  }
