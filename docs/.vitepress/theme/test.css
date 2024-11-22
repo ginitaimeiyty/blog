@@ -391,7 +391,7 @@
     display: block;
     position: absolute;
     background-image: linear-gradient(to top, #d6fbb6 0%, #97ebd7 100%);
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, -50%);
     width: 700px;
     height: 700px;
     opacity: 0;
