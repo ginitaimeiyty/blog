@@ -54,7 +54,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ginitaimeiyty' }
+      { icon: 'github', link: 'https://github.com/ginitaimeiyty' },
+      { icon: 'qq', link: '/qqlogin.php'}
     ],
     search: {
       provider: 'local'

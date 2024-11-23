@@ -75,7 +75,7 @@ const members = [
 
 
 <Confetti /> 
-::: info Team :
+::: info 团队 :
 <VPTeamMembers size="small" :members="members" />
   <!-- <box :items="[ 
    {

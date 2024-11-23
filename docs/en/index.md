@@ -7,36 +7,36 @@ hero:
   textsuffix: '..'
   tagline: 内心湛然，则无往而不乐。
   prelink:
-    title: '<p>🔧本站使用Github Action自动部署</p>🔑仓库地址:https://github.com/ginitaimeiyty/blog'
+    title: '<p>🔧This site is automatically deployed using GitHub Actions</p>🔑Repository address:https://github.com/ginitaimeiyty/blog'
     
   image:
     src: https://s21.ax1x.com/2024/11/20/pAWw6pV.png
     ALT: Man!
   actions:
     - theme: brand
-      text: 🕹️技术博客
+      text: 🕹️Technical blog
       link: /
     - theme: alt
       text: 💯Never give up
       link: /api-examples
 
 features:
-  - title: 数据结构
-    details: 数据结构是一种数据组织、管理和存储的格式
+  - title: Data Structures
+    details: A data structure is a format for organizing, managing and storing data
     icon: 🛡️
-    link: '/data'
-  - title: 计算机网络
-    details: 将地理位置不同的具有独立功能的多台计算机及其外部设备连接起来
+    link: '/en/data'
+  - title: Computer network
+    details: Connect geographically different computers with independent functions and their external devices
     icon: 📡
-    link: '/network'
-  - title: 计算机组成原理
-    details: 一门重要的计算机科学基础课程，主要讲述计算机系统的基本组成结构、工作原理和设计方法
+    link: '/en/network'
+  - title: Principles of computer composition
+    details: An important basic course in computer science, mainly describes the basic structure of computer systems, working principles and design methods
     icon: ⚙️
-    link: /zucheng
-  - title: 操作系统
-    details: 操作系统是人与计算机之间的接口，也是计算机的灵魂
+    link: /en/zucheng
+  - title: Operating system
+    details: Operating system is the interface between human and computer, but also the soul of the computer
     icon: 🖥️
-    link: '/os'
+    link: '/en/os'
 ---
 
 <script setup>
@@ -75,7 +75,7 @@ const members = [
 
 
 <Confetti /> 
-::: info 协作者:
+::: info Team:
 <VPTeamMembers size="small" :members="members" />
   <!-- <box :items="[ 
    {
