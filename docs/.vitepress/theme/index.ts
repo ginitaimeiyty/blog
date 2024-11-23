@@ -31,8 +31,8 @@ import { Announcement } from '@theojs/lumen'
 import { HomeUnderline } from '@theojs/lumen'
 import { DocAsideLogo } from '@theojs/lumen'
 import { Aside_Data } from '../data/AsideData'
-import { HomeFooter } from '@theojs/lumen'
-import { Footer_Data } from '../data/footerData'
+//import { HomeFooter } from '@theojs/lumen'
+//import { Footer_Data } from '../data/footerData'
 import { DocBox, DocLinks, DocBoxCube } from '@theojs/lumen'
 
 
@@ -44,7 +44,7 @@ export default {
       'doc-after': () => h(Twikoo, { Twikoo_Data }),
       'home-hero-info-before': () => h(Announcement) ,
       'aside-ads-before': () => h(DocAsideLogo, { Aside_Data }),
-      'layout-bottom': () => h(HomeFooter, { Footer_Data }) 
+      //'layout-bottom': () => h(HomeFooter, { Footer_Data }) 
       
     }) 
     

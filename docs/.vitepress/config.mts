@@ -36,7 +36,7 @@ export default defineConfig({
           level: 'deep'
     },
     nav: [
-      { text: '国内加速地址(同步较慢)', link:'http://route.一只杉鱼.site:8568/ '},
+      { text: '国内加速地址(同步较慢)', link:'https://www.一只杉鱼.site:8568/ '},
       { text: 'Home', link: '/' },
       { text: '文章', link: '/data' }
     ],

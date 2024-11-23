@@ -38,11 +38,46 @@ features:
     icon: 🖥️
     link: '/os'
 ---
+
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+   {
+    avatar: '/Young.jpg',
+    name: '一只杉鱼',
+    title: '死亡不是重点，遗忘才是',
+    links: [
+      { icon: 'github', link: 'https://github.com/ginitaimeiyty' },
+      /*{ icon: 'bilibili', link: 'https://space.bilibili.com/1929518127?spm_id_from=333.1007.0.0' }*/
+    ]
+  },
+  {
+    avatar: '/feng.jpg',
+    name: '艾伦耶鸽尔',
+    title: '海的那边是什么',
+    links: [
+      { icon: 'github', link: 'https://github.com/lakkla' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/1929518127?spm_id_from=333.1007.0.0' }
+    ]
+  },
+  {
+    avatar: '/sheng.jpg',
+    name: 'shengkio',
+    title: '物质之外亦有精神的世界',
+    links: [
+      { icon: 'github', link: 'https://github.com/shengkio' },
+      { icon: 'bilibili', link: 'https://space.bilibili.com/1826740720?spm_id_from=333.1007.0.0' }
+    ]
+  }
+  ]
+</script>
+
+
 <Confetti /> 
-<DataPanel />
 ::: info 协作者:
-  
-  <box :items="[ 
+<VPTeamMembers size="small" :members="members" />
+  <!-- <box :items="[ 
    {
       name: 'lakkla',
       link: 'https://github.com/lakkla',
@@ -54,6 +89,8 @@ features:
       image: { light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }
     }
   ]"/>
-  
+   -->
 :::
 <Home />
+<DataPanel />
+

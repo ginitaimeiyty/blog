@@ -25,7 +25,7 @@
   
   .dark {
     --custom-block-info-left: #cccccc;
-    --custom-block-info-bg: #474748;
+    --custom-block-info-bg: #141414;
   
     --custom-block-tip-left: #009400;
     --custom-block-tip-bg: #003100;
@@ -55,7 +55,7 @@
   /* info容器:背景色、流体边框 */
   .custom-block.info {
     border-left: none;
-    background-color: var(--custom-block-info-bg);
+    background-color: var(--vp-c-bg-soft);
     position: relative;
     transition: all .3s;
   }
