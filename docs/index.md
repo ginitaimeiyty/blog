@@ -15,10 +15,10 @@ hero:
   actions:
     - theme: brand
       text: 🕹️技术博客
-      link: /
+      link: https://blog.csdn.net/m0_62508606?spm=1010.2135.3001.5343
     - theme: alt
       text: 💯Never give up
-      link: /api-examples
+      link: /introduce
 
 features:
   - title: 数据结构

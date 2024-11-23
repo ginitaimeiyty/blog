@@ -60,4 +60,3 @@
 		return true;
 	}
 ```	
-<Twikoo :Twikoo_Data="{ envId: 'https://www.xn--4gqz7lc3sqg4c.site:8568/twikoo/'  }" />
