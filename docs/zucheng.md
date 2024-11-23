@@ -40,3 +40,4 @@
 :::warning 更多详细信息可查看该作者的文章
 https://blog.csdn.net/bay_Tong/article/details/108610852
 :::
+<Twikoo :Twikoo_Data="{ envId: 'https://www.xn--4gqz7lc3sqg4c.site:8568/twikoo/'  }" />

@@ -180,3 +180,4 @@ II. 幂等 的意味着对同一URL的多个请求应该返回同样的结果。
 :::warning 原文链接
 http://www.cnblogs.com/maybe2030/p/4781555.html
 :::
+<Twikoo :Twikoo_Data="{ envId: 'https://www.xn--4gqz7lc3sqg4c.site:8568/twikoo/'  }" />
