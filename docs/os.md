@@ -78,9 +78,6 @@
 进程的线程共享进程资源；
 一个进程可以并发多个线程，每个线程执行不同的任务。
 
-```地址
-源文件地址：
+:::warning 原文链接
 https://blog.csdn.net/Royalic/article/details/119999404
-
-```
-<Twikoo :Twikoo_Data="{ envId: 'https://www.xn--4gqz7lc3sqg4c.site:8568/twikoo/'  }" />
+:::

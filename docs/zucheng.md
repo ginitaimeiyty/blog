@@ -37,4 +37,6 @@
 
 ### More
 
-更多详细信息可查看该作者的文章：https://blog.csdn.net/bay_Tong/article/details/108610852
+:::warning 更多详细信息可查看该作者的文章
+https://blog.csdn.net/bay_Tong/article/details/108610852
+:::

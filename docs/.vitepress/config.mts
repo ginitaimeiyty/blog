@@ -48,14 +48,15 @@ export default defineConfig({
         items: [
           { text: '计算机组成原理', link: '/zucheng' },
           { text: '数据结构', link: '/data' },
-          { text: '计算机网络', link: '/network' }
+          { text: '计算机网络', link: '/network' },
+          { text: '操作系统', link: '/os' }
         ]
       }
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ginitaimeiyty' },
-      { icon: 'qq', link: '/qqlogin.php'}
+      //{ icon: 'qq', link: '/qqlogin.php'}
     ],
     search: {
       provider: 'local'
