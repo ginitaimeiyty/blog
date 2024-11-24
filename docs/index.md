@@ -13,7 +13,7 @@ hero:
     src: https://s21.ax1x.com/2024/11/20/pAWw6pV.png
     ALT: Man!
   actions:
-    - theme: brand
+    - theme: brand 2
       text: 🕹️技术博客
       link: https://blog.csdn.net/m0_62508606?spm=1010.2135.3001.5343
     - theme: alt
