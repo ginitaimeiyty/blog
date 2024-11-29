@@ -38,7 +38,7 @@ export default defineConfig({
     nav: [
       { text: '国内加速地址(审核原因,暂不支持评论区)', link:'https://www.一只杉鱼.site:8568/ '},
       { text: 'Home', link: '/' },
-      { text: '文章', link: '/data' }
+      { text: '文章', link: '/zucheng' }
     ],
 
     sidebar: [

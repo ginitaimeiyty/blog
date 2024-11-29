@@ -10,7 +10,7 @@ hero:
     title: '<p>🔧本站使用Github Action自动部署</p>🔑仓库地址:https://github.com/ginitaimeiyty/blog'
     
   image:
-    src: https://s21.ax1x.com/2024/11/20/pAWw6pV.png
+    src: /pAWw6pV.png
     ALT: Man!
   actions:
     - theme: brand
