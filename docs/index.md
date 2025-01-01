@@ -5,7 +5,7 @@ hero:
   name: "Mr.🐟 Blog"
   text: "进来看看吧👀"
   textsuffix: '..'
-  tagline: 内心湛然，则无往而不乐。
+  tagline: 不要温和的走进那良夜
   prelink:
     title: '<p>🔧本站使用Github Action自动部署</p>🔑仓库地址:https://github.com/ginitaimeiyty/blog'
     
