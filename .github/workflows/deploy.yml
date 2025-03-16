@@ -76,8 +76,8 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           
-      - name: 查看当前路径
+      - name: 部署文件到远程服务器
         run: |
-          pwd
+          scp -P 7767 -r ./docs/.vitepress/dist/* root@112.249.183.60:/root
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
