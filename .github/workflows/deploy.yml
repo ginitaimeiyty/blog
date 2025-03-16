@@ -45,31 +45,7 @@ jobs:
         run: npm ci # 或 pnpm install / yarn install / bun install
       - name: 使用VitePress框架构建
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
-      - name: 上传编译后的界面
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-      - name: 查看路径
-        run: pwd
-      - name: 查看当前路径文件
-        run: ls
-      - name: cd 
-        run: cd docs
-      - name: ls
-        run: ls
-
-  # 部署工作
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: 部署到GithubPages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    
 #远程服务器
   deploy_remote_server:
     needs: build
@@ -78,7 +54,7 @@ jobs:
       - name: 部署文件到远程服务器
         uses: c0c1/scp-action@v1.0
         with:
-            src: /home/runner/work/blog/blog/docs/.vitepress/dist/*
+            src: ./dist/*
             host: 112.249.183.60
             remote: /root
             port: 7767
