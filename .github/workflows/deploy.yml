@@ -55,6 +55,8 @@ jobs:
         run: ls
       - name: cd 
         run: cd docs
+      - name: ls
+        run: ls
 
   # # 部署工作
   # deploy:
