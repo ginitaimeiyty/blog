@@ -72,18 +72,18 @@ jobs:
     steps:
       - name: 下载构建产物
         uses: actions/download-artifact@v4.1.9
-      - name: ls
-        run: |
-            cd github-pages
-            ls 
-      # - name: 推送文件到远程服务器
-      #   uses: c0c1/scp-action@v1.0
-      #   with:
-      #     src: dist
-      #     host: 112.249.183.60
-      #     remote: /var/www/html
-      #     port: 7768
-      #     user: root
-      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # - name: ls
+      #   run: |
+      #       cd github-pages
+      #       ls 
+      - name: 推送文件到远程服务器
+        uses: c0c1/scp-action@v1.0
+        with:
+          src: github-pages/artifact.tar
+          host: 112.249.183.60
+          remote: /var/www/html
+          port: 7768
+          user: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
 
      
