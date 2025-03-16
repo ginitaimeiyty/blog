@@ -45,6 +45,10 @@ jobs:
         run: npm ci # 或 pnpm install / yarn install / bun install
       - name: 使用VitePress框架构建
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+      - name: 上传编译后的界面
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
       - name: 查看路径
         run: pwd
       - name: 查看当前路径文件
@@ -53,10 +57,6 @@ jobs:
         run: cd docs
       - name: ls
         run: ls
-      - name: 上传编译后的界面
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
 
   # 部署工作
   deploy:
