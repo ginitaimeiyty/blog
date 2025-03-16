@@ -53,10 +53,11 @@ jobs:
         run: pwd
       - name: ls
         run: ls
-      - name: cd 
-        run: cd docs
-      - name: ls
-        run: ls
+      - name: List files in docs directory
+        run: |
+          cd docs
+          ls
+    
 
   # # 部署工作
   # deploy:
