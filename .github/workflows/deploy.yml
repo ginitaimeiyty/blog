@@ -59,6 +59,25 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 部署到GithubPages
         id: deployment
         uses: actions/deploy-pages@v4
+#远程服务器
+  deploy_remote_server:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 安装ssh客户端
+        run: sudo apt-get install -y openssh-client
+
+      - name: 设置SSH密钥
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          
+      - name: 部署文件到远程服务器
+        run: |
+          scp -P 7767 -r docs/.vitepress/dist/* root@112.249.183.60:/root
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
