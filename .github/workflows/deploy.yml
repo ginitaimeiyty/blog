@@ -77,7 +77,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           
       - name: 部署文件到远程服务器
-        run: |
-          scp -P 7767 -r docs/.vitepress/dist root@112.249.183.60:/root
+      - name: 查看当前工作目录
+        run: pwd
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
