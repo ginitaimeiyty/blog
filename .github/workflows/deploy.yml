@@ -46,7 +46,7 @@ jobs:
       - name: 使用VitePress构建
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: 将构建后的文件上传为构建产物
-        uses: actions/upload-artifact@v4.6.1
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: docs/.vitepress/dist
 
