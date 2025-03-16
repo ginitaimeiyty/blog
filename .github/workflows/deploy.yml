@@ -76,8 +76,8 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           
-      - name: 部署文件到远程服务器
-      - name: 查看当前工作目录
-        run: pwd
+      - name: 查看当前路径
+        run: |
+          pwd
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
