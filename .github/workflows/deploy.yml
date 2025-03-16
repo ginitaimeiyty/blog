@@ -52,17 +52,17 @@ jobs:
 
 
   # 部署工作
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: 推送到GithubPages
-        id: deployment
-        uses: actions/deploy-pages@v4.0.5
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   name: Deploy
+  #   steps:
+  #     - name: 推送到GithubPages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4.0.5
 
     
   # 推送到远程服务器
@@ -73,15 +73,18 @@ jobs:
       - name: 下载构建产物
         uses: actions/download-artifact@v4.1.9
       - name: ls
-        run: ls
-      - name: 推送文件到远程服务器
-        uses: c0c1/scp-action@v1.0
-        with:
-          src: dist
-          host: 112.249.183.60
-          remote: /var/www/html
-          port: 7768
-          user: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+            ls
+            cd github-pages
+            ls 
+      # - name: 推送文件到远程服务器
+      #   uses: c0c1/scp-action@v1.0
+      #   with:
+      #     src: dist
+      #     host: 112.249.183.60
+      #     remote: /var/www/html
+      #     port: 7768
+      #     user: root
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
 
      
