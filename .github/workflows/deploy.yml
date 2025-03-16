@@ -47,6 +47,8 @@ jobs:
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: 查看路径
         run: pwd
+      - name: 查看当前路径文件
+        run: ls
       - name: 上传编译后的界面
         uses: actions/upload-pages-artifact@v3
         with:
