@@ -29,75 +29,57 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 拉取本项目的代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
       # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
       - name: 设置node环境
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.2.0
         with:
           node-version: 20
           cache: npm # 或 pnpm / yarn
       - name: 设置界面
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5.0.0
       - name: 安装依赖
         run: npm ci # 或 pnpm install / yarn install / bun install
       - name: 使用VitePress构建
-        run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build、
-      - name: 推送文件到远程服务器
-        uses: c0c1/scp-action@v1.0
+        run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+      - name: 将构建后的文件上传为构建产物
+        uses: actions/upload-artifact@v4.6.1
         with:
-            src: docs/.vitepress/dist
-            host: 112.249.183.60
-            remote: /root
-            port: 7767
-            user: root
-            key: ${{ secrets.SSH_PRIVATE_KEY }}
-      # - name: 将构建后的文件上传为构建产物
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: docs/.vitepress/dist
-      # - name: pwd
-      #   run: pwd
-      # - name: ls
-      #   run: ls
-      # - name: List files in docs directory
-      #   run: |
-      #     cd docs
-      #     ls
-      #     cd .vitepress
-      #     ls
-    
+          path: docs/.vitepress/dist
 
-  # # 部署工作
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   name: Deploy
-  #   steps:
-  #     - name: 推送到GithubPages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: 推送到GithubPages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5
 
     
   # 推送到远程服务器
-  # deploy_remote_server:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 推送文件到远程服务器
-  #       uses: c0c1/scp-action@v1.0
-  #       with:
-  #           src: docs/.vitepress/dist
-  #           host: 112.249.183.60
-  #           remote: /root
-  #           port: 7767
-  #           user: root
-  #           key: ${{ secrets.SSH_PRIVATE_KEY }}
-
+  deploy_remote_server:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 下载构建产物
+        uses: actions/download-artifact@v4.1.9
+      - name: 推送文件到远程服务器
+        uses: c0c1/scp-action@v1.0
+        with:
+          src: dist
+          host: 112.249.183.60
+          remote: /var/www/html
+          port: 7768
+          user: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
 
      
