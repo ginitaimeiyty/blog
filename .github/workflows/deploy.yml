@@ -49,6 +49,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
+      - name: pwd
+        run: pwd
+      - name: ls
+        run: ls
 
   # # 部署工作
   # deploy:
@@ -65,19 +69,19 @@ jobs:
 
     
   # 推送到远程服务器
-  deploy_remote_server:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: 推送文件到远程服务器
-        uses: c0c1/scp-action@v1.0
-        with:
-            src: docs/.vitepress/dist
-            host: 112.249.183.60
-            remote: /root
-            port: 7767
-            user: root
-            key: ${{ secrets.SSH_PRIVATE_KEY }}
+  # deploy_remote_server:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 推送文件到远程服务器
+  #       uses: c0c1/scp-action@v1.0
+  #       with:
+  #           src: docs/.vitepress/dist
+  #           host: 112.249.183.60
+  #           remote: /root
+  #           port: 7767
+  #           user: root
+  #           key: ${{ secrets.SSH_PRIVATE_KEY }}
 
 
      
