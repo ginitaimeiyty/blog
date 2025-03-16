@@ -60,6 +60,7 @@ jobs:
           command: |
                   ln -sf /etc/nginx/sites-{available,enabled}/mywebsite
                   nginx -s reload
+          port: 7768
           host: ${{ secrets.HOST }}
           username: root
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
