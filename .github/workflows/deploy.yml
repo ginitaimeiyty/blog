@@ -57,6 +57,8 @@ jobs:
         run: |
           cd docs
           ls
+          cd .vitepress
+          ls
     
 
   # # 部署工作
