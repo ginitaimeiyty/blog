@@ -67,15 +67,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: 安装ssh客户端
-        run: sudo apt-get install -y openssh-client
-
-      - name: 设置SSH密钥
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          
       - name: 部署文件到远程服务器
         uses: c0c1/scp-action@v1.0
         with:
