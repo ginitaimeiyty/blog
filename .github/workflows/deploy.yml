@@ -72,7 +72,7 @@ jobs:
       - name: 推送文件到远程服务器
         uses: c0c1/scp-action@v1.0
         with:
-            src: docs/.vitepress/dist/*
+            src: docs/.vitepress/dist
             host: 112.249.183.60
             remote: /root
             port: 7767
