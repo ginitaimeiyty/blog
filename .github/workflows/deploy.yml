@@ -74,7 +74,6 @@ jobs:
         uses: actions/download-artifact@v4.1.9
       - name: ls
         run: |
-            ls
             cd github-pages
             ls 
       # - name: 推送文件到远程服务器
