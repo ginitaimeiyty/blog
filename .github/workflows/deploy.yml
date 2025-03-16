@@ -53,6 +53,8 @@ jobs:
         run: pwd
       - name: ls
         run: ls
+      - name: cd 
+        run: cd docs
 
   # # 部署工作
   # deploy:
