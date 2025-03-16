@@ -67,14 +67,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: 部署文件到远程服务器
-        uses: c0c1/scp-action@v1.0
-        with:
-            src: docs/.vitepress/dist
-            host: 112.249.183.60
-            remote: /root
-            port: 7767
-            user: root
-            key: ${{ secrets.SSH_PRIVATE_KEY }}
+       - name: 检查构建后的文件
+         run: |
+            ls -la docs/.vitepress/dist  # 检查生成的文件夹内容
 
      
