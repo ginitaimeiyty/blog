@@ -45,6 +45,15 @@ jobs:
         run: npm ci # 或 pnpm install / yarn install / bun install
       - name: 使用VitePress构建
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+      - name: 推送文件到远程服务器
+        uses: c0c1/scp-action@v1.0
+        with:
+          src: docs/.vitepress/dist
+          host: 112.249.183.60
+          remote: /var/www/html
+          port: 7768
+          user: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: 将构建后的文件上传为构建产物
         uses: actions/upload-pages-artifact@v3.0.1
         with:
@@ -52,38 +61,34 @@ jobs:
 
 
   # 部署工作
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   name: Deploy
-  #   steps:
-  #     - name: 推送到GithubPages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4.0.5
-
-    
-  # 推送到远程服务器
-  deploy_remote_server:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - name: 下载构建产物
-        uses: actions/download-artifact@v4.1.9
-      # - name: ls
-      #   run: |
-      #       cd github-pages
-      #       ls 
-      - name: 推送文件到远程服务器
-        uses: c0c1/scp-action@v1.0
-        with:
-          src: github-pages/artifact.tar
-          host: 112.249.183.60
-          remote: /var/www/html
-          port: 7768
-          user: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: 推送到GithubPages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5
+
+    
+  # # 推送到远程服务器
+  # deploy_remote_server:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 下载构建产物
+  #       uses: actions/download-artifact@v4.1.9
+  #     - name: 推送文件到远程服务器
+  #       uses: c0c1/scp-action@v1.0
+  #       with:
+  #         src: github-pages/artifact.tar
+  #         host: 112.249.183.60
+  #         remote: /var/www/html
+  #         port: 7768
+  #         user: root
+  #         key: ${{ secrets.SSH_PRIVATE_KEY }}
 
      
