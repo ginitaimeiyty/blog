@@ -49,11 +49,21 @@ jobs:
         uses: c0c1/scp-action@v1.0
         with:
           src: docs/.vitepress/dist
-          host: 112.249.183.60
+          host: ${{ secrets.HOST }}
           remote: /var/www/html
           port: 7768
           user: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: 重启远程服务器的Nginx服务
+        uses: garygrossgarten/github-action-ssh@0.8.0
+        with:
+          command: |
+                  ln -sf /etc/nginx/sites-{available,enabled}/mywebsite
+                  nginx -s reload
+          host: ${{ secrets.HOST }}
+          username: root
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: 将构建后的文件上传为构建产物
         uses: actions/upload-pages-artifact@v3.0.1
         with:
