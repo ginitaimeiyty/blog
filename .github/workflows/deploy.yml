@@ -67,8 +67,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: 查找
-        run: ls -la ./dist
       - name: 部署文件到远程服务器
         uses: c0c1/scp-action@v1.0
         with:
