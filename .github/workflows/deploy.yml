@@ -77,7 +77,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           
       - name: 部署文件到远程服务器
-        run: |
-          scp -P 7767 -r ./docs/.vitepress/dist/* root@112.249.183.60:/root
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        uses: c0c1/scp-action@v1.0
+        with:
+            src: ./dist/*
+            host: 112.249.183.60
+            remote: /root
+            port: 7767
+            user: root
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
