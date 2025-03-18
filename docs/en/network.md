@@ -43,7 +43,7 @@ Here is a summary of common interview questions about subnet masks and network p
 &emsp;&emsp;To divide Class B IP address 168.195.0.0 into subnets, each subnet contains 700 hosts:<br>
 
 (1) Convert the number of hosts to binary representation;
-```example
+```
 700=1010111100
 
 ```
@@ -179,6 +179,6 @@ Idempotent means that multiple requests to the same URL should return the same r
 &emsp;&emsp;2) At the transport layer of the client, the HTTP session request is divided into packet segments and source and destination ports are added. For example, if the server uses port 80 to listen to the client's request, the client randomly selects a port such as 5000 to exchange with the server, and the server returns the corresponding request to the client's port 5000. Then use the IP address of the IP layer to find the destination end.<br>
 &emsp;&emsp;3) The network layer of the client does not use the application layer or the transport layer, the main thing is to determine how to reach the server by looking up the routing table, during which there may be multiple routers, these are the work done by the router, do not describe too much, nothing more than by looking up the routing table to determine the path to the server.<br>
 &emsp;&emsp;4) The link layer of the client, the packet is sent to the router through the link layer, searches for the MAC address of the given IP address through the neighbor protocol, and then sends an ARP request to search for the destination address. If the response is received, the IP packet can be transmitted using the ARP request response exchange, and then sends the IP packet to the server address.<br>
-```link
+```
 Original link:http://www.cnblogs.com/maybe2030/p/4781555.html
 ```

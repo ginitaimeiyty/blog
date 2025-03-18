@@ -51,16 +51,14 @@ jobs:
           src: docs/.vitepress/dist
           host: ${{ secrets.HOST }}
           remote: /var/www/html
-          port: 7768
+          port: ${{ secrets.SERVERPORT }}
           user: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: 重启远程服务器的Nginx服务
         uses: garygrossgarten/github-action-ssh@0.8.0
         with:
-          command: |
-                  ln -sf /etc/nginx/sites-{available,enabled}/mywebsite
-                  nginx -s reload
-          port: 7768
+          command: nginx -s reload
+          port: ${{ secrets.SERVERPORT }}
           host: ${{ secrets.HOST }}
           username: root
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -83,23 +81,5 @@ jobs:
       - name: 推送到GithubPages
         id: deployment
         uses: actions/deploy-pages@v4.0.5
-
-    
-  # # 推送到远程服务器
-  # deploy_remote_server:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 下载构建产物
-  #       uses: actions/download-artifact@v4.1.9
-  #     - name: 推送文件到远程服务器
-  #       uses: c0c1/scp-action@v1.0
-  #       with:
-  #         src: github-pages/artifact.tar
-  #         host: 112.249.183.60
-  #         remote: /var/www/html
-  #         port: 7768
-  #         user: root
-  #         key: ${{ secrets.SSH_PRIVATE_KEY }}
 
      

@@ -77,7 +77,7 @@ The thread is contained in the process and is the unit that actually runs the wo
 The threads of a process share process resources;
 A process can have multiple threads concurrently, each performing a different task.
 
-```address
+```
 Source file address:
 https://blog.csdn.net/Royalic/article/details/119999404
 
